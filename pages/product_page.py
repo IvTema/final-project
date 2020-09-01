@@ -6,6 +6,8 @@ class ProductPage(BasePage):
         element_btn_add = self.browser.find_element(*ProductPageLocators.ADD_BTN)
         element_btn_add.click()
         self.solve_quiz_and_get_code()
+        self.should_see_product_added_message()
+        self.price_in_message_same_as_in_basket()
 
     def should_see_product_added_message(self):
         assert self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_IN_MESSAGE).text == \
