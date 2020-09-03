@@ -1,10 +1,6 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-
-
 class LoginPageLocators():
     ENTER = (By.CSS_SELECTOR, "#login_form")
     LOG_IN = (By.CSS_SELECTOR, "#register_form")
@@ -22,3 +18,9 @@ class ProductPageLocators():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_BTN = (By.CSS_SELECTOR, ".header .btn-group .btn.btn-default:nth-child(1)")
+
+
+class BasketPageLocators():
+    BASKET_ITEM = (By.CSS_SELECTOR, "#.basket-items")
+    NO_ITEM_TEXT = (By.XPATH, "//*[contains(text(),'Ваша корзина пуста')]")
