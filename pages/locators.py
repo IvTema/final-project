@@ -4,6 +4,10 @@ from selenium.webdriver.common.by import By
 class LoginPageLocators():
     ENTER = (By.CSS_SELECTOR, "#login_form")
     LOG_IN = (By.CSS_SELECTOR, "#register_form")
+    EMAIL_FIELD = By.CSS_SELECTOR, ("[name='registration-email']")
+    PASSWORD_FIELD = By.CSS_SELECTOR, ("[name='registration-password1']")
+    DUPLICATE_PASSWORD_FIELD = By.CSS_SELECTOR, ("[name='registration-password2']")
+    REGISTRATION_BTN = By.CSS_SELECTOR, ("[name='registration_submit']")
 
 
 class ProductPageLocators():
@@ -19,8 +23,9 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_BTN = (By.CSS_SELECTOR, ".header .btn-group .btn.btn-default:nth-child(1)")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class BasketPageLocators():
     BASKET_ITEM = (By.CSS_SELECTOR, "#.basket-items")
-    NO_ITEM_TEXT = (By.XPATH, "//*[contains(text(),'Ваша корзина пуста')]")
+    NO_ITEM_TEXT = (By.XPATH, "//*[contains(text(),'Your basket is empty')]")
